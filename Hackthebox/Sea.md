@@ -12,7 +12,7 @@ Enumerating port 80:
 
 `ffuf -w ~/Seclists/Discovery/DNS/subdomains-top1million-20000.txt -H "Host: FUZZ.orion.htb" -u http://orion.htb/ -fl 87`
 
-![[Screenshot 2026-07-02 at 9.06.32 PM.png]]
+![](../Screenshot%202026-07-02%20at%209.06.32%20PM.png)
 
 And got nothing.
 
@@ -20,7 +20,7 @@ Directory bruteforcing for finding interesting endpoints:
 
 `gobuster dir -u "http://sea.htb" -w ~/SecLists/Discovery/Web-Content/common.txt`
 
-![[Screenshot 2026-07-02 at 9.02.32 PM.png]]
+![](../Screenshot%202026-07-02%20at%209.02.32%20PM.png)
 
 Only positive is application is running php.
 
