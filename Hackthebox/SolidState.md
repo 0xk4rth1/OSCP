@@ -92,3 +92,9 @@ pty.spawn("/bin/sh")
 After 03 minutes, got the shell 
 
 `root.txt : 8cbb1c6ab9c96cea54994f2ba20d9cae `
+
+**To be Noted:**
+
+1. Makesure to check the default password, if unaware of the password (before guessing, cracking)
+2. monitoring process through pspy reveals process that ps sometimes won't show
+3. If there is POP3 service is installed, makesure to read all the emails.
