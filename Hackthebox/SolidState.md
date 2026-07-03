@@ -92,5 +92,3 @@ pty.spawn("/bin/sh")
 After 03 minutes, got the shell 
 
 `root.txt : 8cbb1c6ab9c96cea54994f2ba20d9cae `
-
-**To be Noted:**
