@@ -20,7 +20,7 @@ Directory bruteforcing for finding interesting endpoints:
 
 `gobuster dir -u "http://orion.htb/api/" -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txt`
 
-`gobuster dir -u "http://orion.htb/" -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txt`
+`gobuster dir -u "http://orion.htb/" -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txt
 
 Found : `http://orion.htb/admin/login` which is running craft cms (5.6.16)
 
