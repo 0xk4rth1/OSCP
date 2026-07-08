@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hackthebox/CozyHosting.md",
+                "file": "Hackthebox/Codify.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CozyHosting"
+              "title": "Codify"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 299.5
   },
   "right": {
     "id": "1f3365d8a349a73b",
@@ -185,8 +185,14 @@
   },
   "active": "baa45461180d5413",
   "lastOpenFiles": [
-    "Hackthebox/Pilgrimage.md",
+    "Pasted image 20260708172430.png",
+    "Pasted image 20260708164555.png",
+    "Pasted image 20260708164238.png",
+    "Pasted image 20260708162256.png",
+    "Pasted image 20260708160523.png",
     "Hackthebox/CozyHosting.md",
+    "Hackthebox/Codify.md",
+    "Hackthebox/Pilgrimage.md",
     "Hackthebox/Nibbles.md",
     "Pasted image 20260707165709.png",
     "Pasted image 20260707165604.png",
@@ -202,10 +208,6 @@
     "Enumeration/FINGER (79).md",
     "Enumeration/FTP (21).md",
     "Pasted image 20260707144137.png",
-    "Pasted image 20260707115318.png",
-    "Pasted image 20260707115245.png",
-    "Pasted image 20260707112147.png",
-    "Pasted image 20260707105354.png",
     "Hackthebox/Makesense.md",
     "Hackthebox/Editor.md",
     "Hackthebox/Orion.md",
@@ -221,7 +223,6 @@
     "Post Exploitation/Powershell.md",
     "Common tools",
     "Hackthebox",
-    "Post Exploitation/MSFConsole.md",
     "Sharing Files",
     "Post Exploitation",
     "Untitled.base",
