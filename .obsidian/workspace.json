@@ -13,12 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< Updated upstream
                 "file": "Hackthebox/Codify.md",
+=======
+                "file": "Hackthebox/Keeper.md",
+>>>>>>> Stashed changes
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
+<<<<<<< Updated upstream
               "title": "Codify"
+=======
+              "title": "Keeper"
+>>>>>>> Stashed changes
             }
           }
         ]
@@ -185,6 +193,7 @@
   },
   "active": "baa45461180d5413",
   "lastOpenFiles": [
+<<<<<<< Updated upstream
     "Pasted image 20260708172430.png",
     "Pasted image 20260708164555.png",
     "Pasted image 20260708164238.png",
@@ -193,6 +202,20 @@
     "Hackthebox/CozyHosting.md",
     "Hackthebox/Codify.md",
     "Hackthebox/Pilgrimage.md",
+=======
+    "Screenshot 2026-07-04 at 12.21.04 PM.png",
+    "Screenshot 2026-07-04 at 12.19.57 PM.png",
+    "Screenshot 2026-07-04 at 10.57.09 AM.png",
+    "Screenshot 2026-07-04 at 10.23.34 AM.png",
+    "Foothold/Linux Enumeration.md",
+    "Hackthebox/Keeper.md",
+    "Foothold/Finding Credentials.md",
+    "Hackthebox/Sunday.md",
+    "Hackthebox/SolidState.md",
+    "Hackthebox/Sea.md",
+    "Hackthebox/Poison.md",
+    "Hackthebox/Orion.md",
+>>>>>>> Stashed changes
     "Hackthebox/Nibbles.md",
     "Pasted image 20260707165709.png",
     "Pasted image 20260707165604.png",
