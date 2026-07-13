@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hackthebox/Jarvis.md",
+                "file": "Hackthebox/Tabby.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Jarvis"
+              "title": "Tabby"
             }
           },
           {
@@ -195,7 +195,10 @@
   },
   "active": "b328e42e8c6722f2",
   "lastOpenFiles": [
+    "Screenshot 2026-07-13 at 8.35.28 PM.png",
+    "Hackthebox/Poison.md",
     "Hackthebox/Keeper.md",
+    "Hackthebox/Tabby.md",
     "Hackthebox/Jarvis.md",
     "Common tools/Misc.md",
     "Hackthebox/asw-9e15ac43-af4e-4447-8b83-db6f04e96352",

@@ -174,3 +174,12 @@ Finally got the root shell
 # cat root.txt
 644a2e4c9a0a897f2d33866e46f33bea
 ```
+
+
+
+
+To be noted:
+
+1. Got stucked in web directory enumeration, before the SQL injection, i noticed the injection before, but sqlmap couldn't identify it, so i skipped it. (Need to work more on my sql injection skills, as sqlmap is not allowed for the OSCP examination)
+2. Identified the escalation vector from www-data to pepper, even the vulnerable part of the code, but stuck in the execution of bypass. 
+3. Root escalation is piece of cake, initial reverse shell payload, not worked, but after changing the payload, it worked
