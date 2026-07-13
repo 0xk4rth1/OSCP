@@ -46,3 +46,4 @@ To connect postgresql database: `psql -h localhost -p 5432 -U postgres`
 
 SELECT * from users; 
 ```
+

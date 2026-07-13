@@ -13,12 +13,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hackthebox/Tartarsauce.md",
+                "file": "Hackthebox/Jarvis.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tartarsauce"
+              "title": "Jarvis"
+            }
+          },
+          {
+            "id": "c9fce1c36af5bf5a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -185,13 +195,20 @@
   },
   "active": "b328e42e8c6722f2",
   "lastOpenFiles": [
+    "Hackthebox/Keeper.md",
+    "Hackthebox/Jarvis.md",
+    "Common tools/Misc.md",
+    "Hackthebox/asw-9e15ac43-af4e-4447-8b83-db6f04e96352",
+    "Hackthebox/asw-67412b07-ccfd-4f33-8878-b03cde78be6a",
+    "Pasted image 20260713171537.png",
+    "Common tools/Pass Crack.md",
+    "Hackthebox/Untitled 1.md",
+    "Hackthebox/Tartarsauce.md",
     "Pasted image 20260709132759.png",
     "Pasted image 20260709125035.png",
     "Pasted image 20260709120722.png",
     "Foothold/Linux Enumeration.md",
     "Sharing Files/Linux.md",
-    "Common tools/Misc.md",
-    "Hackthebox/Tartarsauce.md",
     "Pasted image 20260709113654.png",
     "Pasted image 20260709105922.png",
     "Pasted image 20260709105808.png",
