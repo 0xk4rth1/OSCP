@@ -4,7 +4,7 @@ checking suid bit set binaries using find
 id - checking user involved in any other group
 checking crontab
 cat /etc/cron.d/*
-systemctl list-timers
+systemctl list-timers --no-pager
 writable files
 checking internal open ports
 ps aux | grep <user>
