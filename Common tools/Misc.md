@@ -43,7 +43,23 @@ To connect postgresql database: `psql -h localhost -p 5432 -U postgres`
 \l                      (to list all available databases)
 \c <database_name>      (to select a database)
 \dt                     (to list all tables)
+\du                     (to list the users and the permissions)
 
 SELECT * from users; 
 ```
 
+**AWS-CLI:**
+
+**Private Bucket:**
+
+`aws configure`     (If we have all the required credentials like AWS Access Key ID, AWS Secret Access Key, Default region name)
+
+and then to list the contents of the private bucket after configuration:
+
+`aws s3 ls`
+
+**Public Bucket:**
+
+`aws s3 ls s3://s.cdpn.io --no-sign-request`        (To list content in the bucket)
+
+`aws s3 cp s3://s.cdpn.io/sea.jpg ./sea.jpg --no-sign-request`  (To download content from the bucket)
