@@ -69,3 +69,14 @@ To get the group information for the user (only shows the groups that the curren
 `netstat -ano`      (identifying internal ports are crucial for port forwarding and accessing it outside)
 
 `ss -tulnp`
+
+`icacls "c:/path/to/file.txt"` (To check, whether the user has read,write,execute permission of a file )
+
+```
+-(F): Full Control (Includes complete edit, modify, and delete rights).
+-(M): Modify Access (Allows reading, writing, and deleting the file).
+-(W): Write Access (Allows editing and adding data).
+-(RX)or (R): Read-Only (You **cannot** edit the file)
+```
+
+![](../Screenshot%202026-07-20%20at%209.49.18%20PM.png)
