@@ -7,6 +7,8 @@ UDP quickscan - Rustscan:
 
 `rustscan -a 10.129.228.102 -r 0-65535 --udp | tee -a udp-scan`
 
+`rustscan -a 10.129.228.102 --top --udp | tee -a udp-scan`
+
 TCP Scan - Nmap:
 
 `nmap $ip -A -sC -sV -p- -o nmap`

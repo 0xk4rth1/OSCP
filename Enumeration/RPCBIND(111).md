@@ -7,6 +7,8 @@ To display clean output
 
 `rpcinfo -s <TARGET-IP>`
 
+![](../Pasted%20image%2020260720095403.png)
+
 Enumerating rpcbind using nmap:
 
 `nmap -p 111 --script=rpcinfo,rpc-grind <TARGET-IP>`

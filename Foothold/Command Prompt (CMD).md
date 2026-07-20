@@ -67,3 +67,5 @@ To get the group information for the user (only shows the groups that the curren
 **To check all the ports (listening):**
 
 `netstat -ano`      (identifying internal ports are crucial for port forwarding and accessing it outside)
+
+`ss -tulnp`
