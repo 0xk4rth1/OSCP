@@ -153,3 +153,4 @@ Getting the root flag :  `C:\Users\Administrator\Desktop\root.txt`
 ![](../Screenshot%202026-07-20%20at%2010.13.52%20PM.png)
 
 `root.txt : f574a3e7650cebd8c39784299cb570f8`
+
