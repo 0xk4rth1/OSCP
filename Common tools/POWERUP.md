@@ -38,3 +38,7 @@ What PowerUp Enumerates
 `Get-UnquotedService`     (Specifically hunts down unquoted service paths.)
 
 `Get-ModifiableServiceFile`   (Specifically checks for service binaries with weak file permissions.)
+
+If we encounter any problem while executing scripts
+
+`Set-ExecutionPolicy Bypass -Scope Process`
